@@ -1,0 +1,14 @@
+CREATE TABLE studentCourse (
+    StudentId INT,
+    CourseId INT,
+    FOREIGN KEY (StudentId) REFERENCES student (StudentId),
+    FOREIGN KEY (CourseId) REFERENCES course2 (CourseId)
+);
+
+ALTER TABLE Course2
+ADD CONSTRAINT Course PRIMARY KEY (CourseId);
+
+ALTER TABLE StudentCourse
+    MODIFY StudentId Number;
+
+INSERT INTO studentCourse (StudentId, CourseId) VALUES (20100123,12345);

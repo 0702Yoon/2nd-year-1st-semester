@@ -1,0 +1,103 @@
+SELECT sc.CourseId, c.Lecturer, c.CourseName 
+FROM StudentCourse sc
+Join Course2 c ON sc.CourseId = c.CourseId 
+WHERE StudentId = ? AND Is_completed = ?
+ORDER BY CourseId ASC
+
+SELECT s.studentId, s.fName, s.lName, s.major 
+FROM StudentCourse sc 
+JOIN student s ON sc.StudentId = s.StudentId 
+ WHERE sc.CourseId = ? AND sc.Is_completed = ?
+ORDER BY sc.CourseId ASC
+
+
+SELECT c.CourseId, c.CourseName, c.Lecturer
+FROM Course2 c
+INNER JOIN StudentCourse sc ON c.CourseId = sc.CourseId
+WHERE sc.StudentId = ? AND sc.is_completed = 1 
+ORDER BY c.CourseId ASC";
+
+Select StudentId, Role FROM student WHERE StudentId = ? AND Password = ?
+
+Select studentId FROM student Where studentId = ?
+
+Select PRECOURSEID FROM PRECOURSE Where COURSEID = ?
+
+Select COUNT(*) FROM PRECOURSE Where COURSEID = ?
+
+Select Is_completed 
+FROM StudentCourse 
+Where COURSEID = ? AND StudentId = ?
+
+Select COUNT(*) 
+FROM StudentCourse 
+Where StudentId = ?
+
+Select COUNT(*) 
+FROM Student 
+Where StudentId = ?
+
+Select COUNT(*) 
+FROM Course2 
+Where CourseId = ?"
+
+Select COUNT(*) 
+FROM StudentCourse 
+Where CourseId= ?
+
+Select COUNT(*) 
+FROM Course2 
+Where CourseId = ?
+
+
+DELETE FROM STUDENTCOURSE 
+WHERE StudentId = ?
+DELETE FROM Student
+ WHERE StudentId = ?
+
+DELETE FROM StudentCourse 
+WHERE CourseId = ?"
+
+DELETE FROM Course2 
+WHERE CourseId = ?
+
+INSERT INTO STUDENT (studentId, fName, lName, major) 
+VALUES (studentId, fName, lName, major
+
+INSERT INTO 
+STUDENT (studentId, fName, lName, major, Password, Role) 
+VALUES (?, ?, ?, ?, ?, ?)
+
+
+INSERT INTO 
+STUDENTCOURSE (studentId, CourseId, is_completed) 
+VALUES (?, ?, 0)
+
+
+UPDATE STUDENTCOURSE SET is_completed = 1 
+WHERE StudentId = ? and CourseId = ?
+
+
+
+
+Insert INTO 
+Course2 (CourseId, lecturer, CourseName) 
+VALUES (?,?,?)
+
+
+INSERT INTO 
+PreCourse (CourseId, PRECOURSEID) 
+VALUES (?,?)
+
+INSERT INTO 
+STUDENTCOURSE (StudentId, CourseId,is_ComPleted) 
+VALUES (?,?,0)
+
+
+
+
+
+
+
+
+
